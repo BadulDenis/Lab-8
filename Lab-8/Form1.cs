@@ -34,10 +34,10 @@ namespace Lab_8
             int m = int.MaxValue;
             for (i = 0; i < 4; i++)
             {
-                for (j = 0; j < 3; j++)
-
-                    if (a[0, j] < m) m = a[0, j];
-                textBox1.Text = Convert.ToString(m);
+                m = a[i, 0];
+                for (j = 1; j < 3; j++)
+                    if (a[i, j] < m) m = a[i, j];
+                textBox1.Text += m.ToString() + " ";
             }
 
         }
